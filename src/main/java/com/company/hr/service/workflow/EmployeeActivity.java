@@ -8,16 +8,20 @@ import com.company.hr.Employee;
 import com.company.hr.EmployeeManager;
 import com.company.hr.dal.EmployeeDAO;
 import com.company.hr.service.representation.EmployeeRepresentation;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 /**
  * This class' responsibility is to manage the workflow of accessing/creating/updating/deleting resources
  * using the EmployeeDOA object.
  *
  */
+@Service
 public class EmployeeActivity {
 
     //private static EmployeeDAO dao = new EmployeeDAO();
-    private static EmployeeManager em = new EmployeeManager();
+    @Autowired
+    private EmployeeManager em;
 
     public Set<EmployeeRepresentation> getEmployees() {
 

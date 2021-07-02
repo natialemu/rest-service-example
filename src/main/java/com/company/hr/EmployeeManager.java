@@ -6,10 +6,14 @@ import java.util.Random;
 import java.util.Set;
 
 import com.company.hr.dal.EmployeeDAO;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
+@Service
 public class EmployeeManager {
 
-    private static EmployeeDAO dao = new EmployeeDAO();
+    @Autowired
+    private  EmployeeDAO dao;
 
     public Set<Employee> getAllEmployees(){
         return dao.getAllEmployees();

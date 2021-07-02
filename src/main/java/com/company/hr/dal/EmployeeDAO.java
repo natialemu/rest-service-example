@@ -6,7 +6,9 @@ import java.util.Random;
 import java.util.Set;
 
 import com.company.hr.Employee;
+import org.springframework.stereotype.Repository;
 
+@Repository
 public class EmployeeDAO{
 
     private static Set<Employee> employees = new HashSet<Employee>();
